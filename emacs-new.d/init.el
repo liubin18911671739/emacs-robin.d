@@ -188,7 +188,7 @@
 (prefer-coding-system 'utf-8)
 ;;; ---------------------
 
-(add-to-list 'load-path "~/.emacs.d/slime/")
+(add-to-list 'load-path "~/.emacs.d/slime2/")
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (require 'slime)
 (slime-setup '(slime-fancy))
