@@ -1,0 +1,53 @@
+;; Object hello-word/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hello-word/"
+  :tables
+  (list
+    (semanticdb-table "makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( (".PHONY" variable (:default-value ("all" "clean")) nil [1 20])
+            ("TARGET" variable (:default-value ("test")) nil [20 34])
+            ("SOURCES" variable (:default-value ("test.c")) nil [34 51])
+            ("OPT" variable (:default-value ("-O2" "-Wall")) nil [51 67])
+            ("CC" variable (:default-value ("gcc")) nil [67 76])
+            ("CFLAGS" variable (:default-value ("$(OPT)" "-L" "/usr/X11R6/lib" "-lX11" "-lm")) nil [76 120])
+            ("all" function (:arguments ("$(SOURCES)")) nil [120 169])
+            ("clean" function nil nil [169 198]))          
+      :file "makefile"
+      :pointmax 198
+      :fsize 197
+      :lastmodtime '(22158 3693 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 54]))                  
+                :type "int")
+                nil [21 399]))          
+      :file "test.c"
+      :pointmax 401
+      :fsize 408
+      :lastmodtime '(22158 4858 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "fileCopy.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function (:type "int") nil [60 262]))          
+      :file "fileCopy.c"
+      :pointmax 263
+      :fsize 262
+      :lastmodtime '(22135 38030 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!r0b1n!workspace!hello-word!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

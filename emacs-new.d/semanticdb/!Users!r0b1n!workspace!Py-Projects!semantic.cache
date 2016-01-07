@@ -1,0 +1,25 @@
+;; Object Py-Projects/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Py-Projects/"
+  :tables
+  (list
+    (semanticdb-table "hello.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("for" code nil nil [40 77])
+            ("strings" variable nil nil [78 96])
+            ("aNum" code nil nil [97 107])
+            ("print" code nil nil [109 134])
+            ("print" code nil nil [135 156])
+            ("for" code nil nil [158 195])
+            ("main" function nil nil [196 265])
+            ("func" function nil nil [267 288])
+            ("if" code nil nil [290 328]))          
+      :file "hello.py"
+      :pointmax 328
+      :fsize 337
+      :lastmodtime '(22158 766 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!r0b1n!workspace!Py-Projects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
