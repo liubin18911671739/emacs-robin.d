@@ -228,9 +228,9 @@
 
 (require 'markdown-mode)
 
-(require 'ess)
+;; (require 'ess)
 
-(setq ess-eval-visibly nil)
-                                        ;ESS will not print the evaluated commands, also speeds up the evaluation
-(setq ess-ask-for-ess-directory nil)
-                                        ;if you don't want to be prompted each time you start an interactive R session
+;; (setq ess-eval-visibly nil)
+;;                                         ;ESS will not print the evaluated commands, also speeds up the evaluation
+;; (setq ess-ask-for-ess-directory nil)
+;;                                         ;if you don't want to be prompted each time you start an interactive R session
