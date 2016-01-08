@@ -5,13 +5,19 @@ my emacs.d configuration inspired by great emacsers
 
 [cedet](http://tuhdo.github.io/c-ide.html)
 
+for C/C++ development
+
 *https://github.com/emacsmirror/cedet*
 
 [Steve Purcell](http://www.sanityinc.com/)
 
 *https://github.com/purcell/emacs.d*
 
+for web development
+
 [elpy](http://elpy.readthedocs.org/en/latest/introduction.html)
+
+for python development
 
 *https://github.com/jorgenschaefer/elpy*
 
@@ -27,7 +33,7 @@ on linux need install anaconda build-essential markdown pyflakes xpdf ghostscrip
 
 `cp -rf emacs-robin.d/emacs-new.d ~/.emacs.d`
 
-restart your emacs, finish the installation, tested on emacs24.4 higher
+restart your emacs, finish the installation, tested on emacs24.4 higher, mac osx 10.11, opensuse 42 (need remove mac features)
 
 ## after that
 
@@ -36,3 +42,7 @@ add tmux.conf and zshrc
 which the configuration of tmux and oh-my-zsh
 
 on mac use iterm2 and zsh
+
+oh-my-zsh:
+
+https://github.com/r0b1n1983liu/oh-my-zsh.git
