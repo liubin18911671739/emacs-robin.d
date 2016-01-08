@@ -188,7 +188,7 @@
 (prefer-coding-system 'utf-8)
 ;;; ---------------------
 
-(add-to-list 'load-path "~/.emacs.d/slime2/")
+(add-to-list 'load-path "~/.emacs.d/slime/")
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (require 'slime)
 (slime-setup '(slime-fancy))
@@ -228,9 +228,7 @@
 
 (require 'markdown-mode)
 
-;; (require 'ess)
+(require 'php-mode)
 
-;; (setq ess-eval-visibly nil)
-;;                                         ;ESS will not print the evaluated commands, also speeds up the evaluation
-;; (setq ess-ask-for-ess-directory nil)
-;;                                         ;if you don't want to be prompted each time you start an interactive R session
+(add-to-list 'load-path "~/.emacs.d/2ESS/lisp/")
+(load "ess-site")
