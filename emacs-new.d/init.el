@@ -212,7 +212,7 @@
 
 (global-set-key [f9] 'shell)
 
-(global-set-key [f10] 'python-shell-switch-to-shell)
+(global-set-key [f10] 'run-python)
 
 (global-set-key [f11] 'R)
 
@@ -251,3 +251,24 @@
 ;; add java supports
 
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
+
+
+;; Emacs 24.4
+;; ((boundp 'python-shell-interpreter-interactive-arg)
+;;  (setq python-shell-interpreter ipython
+;;        python-shell-interpreter-args "-i")
+
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args "--pylab"
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+ "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+ "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+ "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+;; Python补全
+(add-hook 'python-mode-hook 'jedi:setup)
