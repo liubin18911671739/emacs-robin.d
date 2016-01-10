@@ -49,7 +49,7 @@
 
 (require 'setup-helm)
 (require 'setup-helm-gtags)
-;; (require 'setup-ggtags)
+(require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
 
@@ -196,7 +196,7 @@
 
 (package-initialize)
 
-(elpy-enable)
+;;(elpy-enable)
 
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
@@ -210,7 +210,13 @@
 
 ;;(global-set-key [f8] 'compile)
 
+(global-set-key [f9] 'shell)
+
 (global-set-key [f10] 'python-shell-switch-to-shell)
+
+(global-set-key [f11] 'R)
+
+(global-set-key [f12] 'slime)
 
 (global-set-key [f7] 'menu-bar-open)
 
@@ -218,11 +224,11 @@
 
 (global-set-key [f2] 'kill-buffer)
 
-(global-set-key [f3] 'calendar)
+(global-set-key [f5] 'package-install)
 
-(global-set-key [f4] 'calc)
+(global-set-key [f6] 'package-list-packages)
 
-(global-set-key [f9] 'shell)
+(global-set-key [f4] 'eval-buffer)
 
 (require 'sr-speedbar)
 
@@ -232,3 +238,16 @@
 
 (add-to-list 'load-path "~/.emacs.d/2ESS/lisp/")
 (load "ess-site")
+
+(speedbar-add-supported-extension ".R")
+
+(sr-speedbar-handle-auto-refresh t)
+
+(setq dframe-update-speed t)
+(global-set-key (kbd "<f3>") (lambda()
+                               (interactive) (sr-speedbar-toggle)))
+
+
+;; add java supports
+
+(add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))

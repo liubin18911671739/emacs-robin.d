@@ -1,0 +1,16 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: makefile for XLib
+# key: mainc
+# expand-env: ((yas-indent-line 'fixed) (indent-tabs-mode t))
+# contributor: Chen Bin <chenbin DOT sh AT gmail>
+# --
+.PHONY = all clean
+TARGET = ${1:main}
+SOURCES = $( *.c)
+OPT = -O2 -Wall
+CC = gcc
+CFLAGS = $(OPT) -lm
+all: $(SOURCES)
+	$(CC) -o $(TARGET) $^ $(CFLAGS)
+clean:
+	rm -rf *.o $(TARGET)

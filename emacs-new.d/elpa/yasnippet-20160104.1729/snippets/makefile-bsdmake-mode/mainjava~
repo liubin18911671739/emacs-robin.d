@@ -1,0 +1,16 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: makefile for XLib
+# key: main
+# expand-env: ((yas-indent-line 'fixed) (indent-tabs-mode t))
+# contributor: Chen Bin <chenbin DOT sh AT gmail>
+# --
+.PHONY = all clean
+TARGET = ${1:main}
+SOURCES = $(wildcard *.java)
+OPT = -O2 -Wall
+CC = javac
+CFLAGS = $(OPT)
+all: $(SOURCES)
+	$(CC) $^ 
+clean:
+	rm -rf *.class $(TARGET)

@@ -1,6 +1,12 @@
 # -*- mode: snippet -*-
 # name: main
-# key: main
+# key: mian
 # --
+#!/usr/bin/env python
+# coding=utf-8
+
 def main():
-    $0
+    pass
+
+if __name__ == '__main__':
+    main()
