@@ -52,6 +52,8 @@
 (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-keys)
+(require 'setup-ipython)
 
 (windmove-default-keybindings)
 
@@ -159,79 +161,28 @@
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
-;;; package --- Summary
-;;; Commentary:
+(require 'setup-basic)
 
-;;(tool-bar-mode 0)
-;;(menu-bar-mode 1)
-;;(scroll-bar-mode t)
-(setq inhibit-startup-message t)
-(setq gnus-inhibit-startup-message t)
-(setq initial-scratch-message "")
-(line-number-mode t)
-(global-linum-mode t)
-(xterm-mouse-mode t)
-
-(set-language-environment 'UTF-8)
-(set-locale-environment "UTF-8")
-;;(set-locale-environment "UTF-8")
-;;(set-language-environment 'Chinese-GB)
-(set-default-font "Dejavu Mono 16")
-
-;;
-                                        ; ---------------------
-(prefer-coding-system 'utf-8)
-;;(prefer-coding-system 'gb18030)
-(prefer-coding-system 'gbk)
-(prefer-coding-system 'gb2312)
-(prefer-coding-system 'utf-16)
-(prefer-coding-system 'utf-8)
-;;; ---------------------
-
+;;; setup slime
 (add-to-list 'load-path "~/.emacs.d/slime2/")
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (require 'slime)
 (slime-setup '(slime-fancy))
 
-
-(package-initialize)
-
 ;;(elpy-enable)
 
-;(require 'auto-complete)
-;(global-auto-complete-mode t)
-
+;;; setup flycheck
 (require 'flycheck)
 (global-flycheck-mode t)
 
-;;(yas-global-mode 1)
-
-;; ;; Function keys
-
-;;(global-set-key [f8] 'compile)
-
-(global-set-key [f9] 'shell)
-
-(global-set-key [f10] 'run-python)
-
-(global-set-key [f11] 'R)
-
-(global-set-key [f12] 'slime)
-
-(global-set-key [f7] 'menu-bar-open)
-
-(global-set-key [f1] 'dired)
-
-(global-set-key [f2] 'kill-buffer)
-
-(global-set-key [f5] 'package-install)
-
-(global-set-key [f6] 'package-list-packages)
-
-(global-set-key [f4] 'eval-buffer)
-
+;;; setup sr-speedbar
 (require 'sr-speedbar)
-
+(sr-speedbar-handle-auto-refresh t)
+(speedbar-add-supported-extension ".R")
+(setq dframe-update-speed t)
+(global-set-key (kbd "<f3>") (lambda()
+                               (interactive) (sr-speedbar-toggle)))
+;;;setup mode support
 (require 'markdown-mode)
 
 (require 'php-mode)
@@ -239,36 +190,5 @@
 (add-to-list 'load-path "~/.emacs.d/2ESS/lisp/")
 (load "ess-site")
 
-(speedbar-add-supported-extension ".R")
-
-(sr-speedbar-handle-auto-refresh t)
-
-(setq dframe-update-speed t)
-(global-set-key (kbd "<f3>") (lambda()
-                               (interactive) (sr-speedbar-toggle)))
-
-
 ;; add java supports
-
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
-
-
-;; Emacs 24.4
-;; ((boundp 'python-shell-interpreter-interactive-arg)
-;;  (setq python-shell-interpreter ipython
-;;        python-shell-interpreter-args "-i")
-
-(setq
- python-shell-interpreter "ipython"
- python-shell-interpreter-args "--pylab"
- python-shell-prompt-regexp "In \\[[0-9]+\\]: "
- python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
- python-shell-completion-setup-code
- "from IPython.core.completerlib import module_completion"
- python-shell-completion-module-string-code
- "';'.join(module_completion('''%s'''))\n"
- python-shell-completion-string-code
- "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-
-;; Python补全
-(add-hook 'python-mode-hook 'jedi:setup)
