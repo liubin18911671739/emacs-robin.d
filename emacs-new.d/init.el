@@ -3,7 +3,13 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(setq gc-cons-threshold 100000000)
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+(setenv "PATH" (concat (getenv "PATH") ":/Users/r0b1n/anaconda/bin/"))
+(setq exec-path (append exec-path '("/Users/r0b1n/anaconda/bin/")))
+
+(setq gc-cons-threshold 1000000)
 (setq inhibit-startup-message t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -52,6 +58,9 @@
 (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-keys)
+;;(require 'setup-ipython)
+(require 'setup-w3m)
 
 (windmove-default-keybindings)
 
@@ -88,7 +97,7 @@
 ;; “java”: The default style for java-mode (see below)
 ;; “user”: When you want to define your own style
 (setq
- c-default-style "linux" ;; set style to "linux"
+ c-default-style "linux" ;; set style to "python"
  )
 
 (global-set-key (kbd "RET") 'newline-and-indent)  ; automatically indent when press RET
@@ -159,116 +168,46 @@
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
-;;; package --- Summary
-;;; Commentary:
+(require 'setup-basic)
 
-;;(tool-bar-mode 0)
-;;(menu-bar-mode 1)
-;;(scroll-bar-mode t)
-(setq inhibit-startup-message t)
-(setq gnus-inhibit-startup-message t)
-(setq initial-scratch-message "")
-(line-number-mode t)
-(global-linum-mode t)
-(xterm-mouse-mode t)
-
-(set-language-environment 'UTF-8)
-(set-locale-environment "UTF-8")
-;;(set-locale-environment "UTF-8")
-;;(set-language-environment 'Chinese-GB)
-(set-default-font "Dejavu Mono 16")
-
-;;
-                                        ; ---------------------
-(prefer-coding-system 'utf-8)
-;;(prefer-coding-system 'gb18030)
-(prefer-coding-system 'gbk)
-(prefer-coding-system 'gb2312)
-(prefer-coding-system 'utf-16)
-(prefer-coding-system 'utf-8)
-;;; ---------------------
-
-(add-to-list 'load-path "~/.emacs.d/slime/")
+;;; setup slime
+(add-to-list 'load-path "~/.emacs.d/slime2/")
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (require 'slime)
 (slime-setup '(slime-fancy))
 
+(elpy-enable)
 
-(package-initialize)
-
-;;(elpy-enable)
-
-;(require 'auto-complete)
-;(global-auto-complete-mode t)
-
+;;; setup flycheck
 (require 'flycheck)
 (global-flycheck-mode t)
 
-;;(yas-global-mode 1)
-
-;; ;; Function keys
-
-;;(global-set-key [f8] 'compile)
-
-(global-set-key [f9] 'shell)
-
-(global-set-key [f10] 'run-python)
-
-(global-set-key [f11] 'R)
-
-(global-set-key [f12] 'slime)
-
-(global-set-key [f7] 'menu-bar-open)
-
-(global-set-key [f1] 'dired)
-
-(global-set-key [f2] 'kill-buffer)
-
-(global-set-key [f5] 'package-install)
-
-(global-set-key [f6] 'package-list-packages)
-
-(global-set-key [f4] 'eval-buffer)
-
+;;; setup sr-speedbar
 (require 'sr-speedbar)
-
-(require 'markdown-mode)
-
-(require 'php-mode)
-
-(add-to-list 'load-path "~/.emacs.d/2ESS/lisp/")
-(load "ess-site")
-
-(speedbar-add-supported-extension ".R")
-
 (sr-speedbar-handle-auto-refresh t)
-
+(speedbar-add-supported-extension ".R")
 (setq dframe-update-speed t)
 (global-set-key (kbd "<f3>") (lambda()
                                (interactive) (sr-speedbar-toggle)))
+;;;setup mode support
+(require 'markdown-mode)
 
+(require 'php-mode)
+(require 'smarty-mode)
+(add-to-list 'load-path "~/.emacs.d/ESS2/lisp/")
+(load "ess-site")
 
 ;; add java supports
-
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
-
-
-;; Emacs 24.4
-;; ((boundp 'python-shell-interpreter-interactive-arg)
-;;  (setq python-shell-interpreter ipython
-;;        python-shell-interpreter-args "-i")
-
-(setq
- python-shell-interpreter "ipython"
- python-shell-interpreter-args "--pylab"
- python-shell-prompt-regexp "In \\[[0-9]+\\]: "
- python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
- python-shell-completion-setup-code
- "from IPython.core.completerlib import module_completion"
- python-shell-completion-module-string-code
- "';'.join(module_completion('''%s'''))\n"
- python-shell-completion-string-code
- "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-
-;; Python补全
-(add-hook 'python-mode-hook 'jedi:setup)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((no-byte-compile t)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
