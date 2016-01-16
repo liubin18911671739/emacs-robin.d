@@ -59,7 +59,7 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 (require 'setup-keys)
-;;(require 'setup-ipython)
+(require 'setup-ipython)
 (require 'setup-w3m)
 
 (windmove-default-keybindings)
@@ -97,7 +97,7 @@
 ;; “java”: The default style for java-mode (see below)
 ;; “user”: When you want to define your own style
 (setq
- c-default-style "linux" ;; set style to "python"
+ c-default-style "python" ;; set style to "python"
  )
 
 (global-set-key (kbd "RET") 'newline-and-indent)  ; automatically indent when press RET
@@ -184,11 +184,10 @@
 
 ;;; setup sr-speedbar
 (require 'sr-speedbar)
-(sr-speedbar-handle-auto-refresh t)
-(speedbar-add-supported-extension ".R")
-(setq dframe-update-speed t)
+;;(speedbar-add-supported-extension ".R")
 (global-set-key (kbd "<f3>") (lambda()
                                (interactive) (sr-speedbar-toggle)))
+
 ;;;setup mode support
 (require 'markdown-mode)
 
@@ -199,15 +198,3 @@
 
 ;; add java supports
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(safe-local-variable-values (quote ((no-byte-compile t)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

@@ -261,8 +261,11 @@
 (require 'speedbar)
 (require 'advice)
 (require 'cl-lib)
+(speedbar-add-supported-extension ".R")
+
 (eval-when-compile
   (require 'cl))
+
 
 ;;; Code:
 
@@ -271,12 +274,12 @@
   "Same frame speedbar."
   :group 'speedbar)
 
-(defcustom sr-speedbar-default-width 40
+(defcustom sr-speedbar-default-width 30
   "Initial width of `sr-speedbar-window' under window system."
   :type 'integer
   :group 'sr-speedbar)
 
-(defcustom sr-speedbar-max-width 50
+(defcustom sr-speedbar-max-width 40
   "The max width limit that window allowed.
 Default, if hide `sr-speedbar' window will remember
 window width, except the window width larger than
@@ -292,7 +295,7 @@ Default is t."
          (set symbol value))
   :group 'sr-speedbar)
 
-(defcustom sr-speedbar-right-side t
+(defcustom sr-speedbar-right-side nil
   "Show the speedbar to the right side of the current window.
 If nil, the speedbar will appear on the left.
 Default is t."

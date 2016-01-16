@@ -14,7 +14,9 @@
 (set-locale-environment "UTF-8")
 ;;(set-locale-environment "UTF-8")
 ;;(set-language-environment 'Chinese-GB)
-(set-default-font "Dejavu Mono 16")
+
+;;(set-default-font "Dejavu Mono 16")
+(set-default-font "SimHei 16")
 
 ;;; ---------------------
 (prefer-coding-system 'utf-8)

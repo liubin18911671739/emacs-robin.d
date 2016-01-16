@@ -211,13 +211,13 @@ this to prevent this from happening."
 
 This should be the same interpreter the project will be run with,
 and not an interactive shell like ipython."
-  :type '(choice (const :tag "python" "python")
+  :type '(choice (const :tag "python" "ipython")
                  (const :tag "python2" "python2")
                  (const :tag "python3" "python3")
                  (const :tag "pythonw (Python on Windows)" "pythonw")
                  (string :tag "Other"))
   :safe (lambda (val)
-          (member val '("python" "python2" "python3" "pythonw")))
+          (member val '("ipython" "python2" "python3" "pythonw")))
   :group 'elpy)
 
 (defcustom elpy-rpc-pythonpath (file-name-directory (locate-library "elpy"))
@@ -335,7 +335,7 @@ edited instead. Setting this variable to nil disables this feature."
     (define-key map (kbd "C-c C-s") 'elpy-rgrep-symbol)
     (define-key map (kbd "C-c C-t") 'elpy-test)
     (define-key map (kbd "C-c C-v") 'elpy-check)
-    (define-key map (kbd "C-c C-z") 'elpy-shell-switch-to-shell)
+    (define-key map (kbd "C-c C-s") 'elpy-shell-switch-to-shell)
     (define-key map (kbd "C-c C-r i") 'elpy-importmagic-fixup)
     (define-key map (kbd "C-c C-r p") 'elpy-autopep8-fix-code)
     (define-key map (kbd "C-c C-r r") 'elpy-refactor)
