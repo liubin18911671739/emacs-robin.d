@@ -20,6 +20,7 @@
 
 (global-set-key [f4] 'eval-buffer)
 
+<<<<<<< HEAD
 (global-set-key [C-f9] 'shell)
 
 (global-set-key [C-f10] 'run-python)
@@ -40,5 +41,7 @@
 
 (global-set-key [C-f4] 'eval-buffer)
 
+=======
+>>>>>>> 5544e96ed9bc9adea91a75c09064cc595ddfecda
 
 (provide 'setup-keys)

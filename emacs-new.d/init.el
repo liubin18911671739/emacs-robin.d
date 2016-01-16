@@ -60,7 +60,10 @@
 (require 'setup-editing)
 (require 'setup-keys)
 (require 'setup-ipython)
+<<<<<<< HEAD
 (require 'setup-w3m)
+=======
+>>>>>>> 5544e96ed9bc9adea91a75c09064cc595ddfecda
 
 (windmove-default-keybindings)
 
@@ -176,7 +179,11 @@
 (require 'slime)
 (slime-setup '(slime-fancy))
 
+<<<<<<< HEAD
 (elpy-enable)
+=======
+;;(elpy-enable)
+>>>>>>> 5544e96ed9bc9adea91a75c09064cc595ddfecda
 
 ;;; setup flycheck
 (require 'flycheck)
@@ -184,10 +191,18 @@
 
 ;;; setup sr-speedbar
 (require 'sr-speedbar)
+<<<<<<< HEAD
 ;;(speedbar-add-supported-extension ".R")
 (global-set-key (kbd "<f3>") (lambda()
                                (interactive) (sr-speedbar-toggle)))
 
+=======
+(sr-speedbar-handle-auto-refresh t)
+(speedbar-add-supported-extension ".R")
+(setq dframe-update-speed t)
+(global-set-key (kbd "<f3>") (lambda()
+                               (interactive) (sr-speedbar-toggle)))
+>>>>>>> 5544e96ed9bc9adea91a75c09064cc595ddfecda
 ;;;setup mode support
 (require 'markdown-mode)
 
