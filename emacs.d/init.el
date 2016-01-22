@@ -59,7 +59,7 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 (require 'setup-keys)
-(require 'setup-ipython)
+;;(require 'setup-ipython)
 (require 'setup-w3m)
 
 (windmove-default-keybindings)
@@ -177,6 +177,7 @@
 (slime-setup '(slime-fancy))
 
 (elpy-enable)
+(elpy-use-ipython)
 
 ;;; setup flycheck
 (require 'flycheck)
