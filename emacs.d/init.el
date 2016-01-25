@@ -55,11 +55,11 @@
 
 (require 'setup-helm)
 (require 'setup-helm-gtags)
-(require 'setup-ggtags)
+;;(require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
 (require 'setup-keys)
-;;(require 'setup-ipython)
+;;(require 'setup-languages)
 (require 'setup-w3m)
 
 (windmove-default-keybindings)
@@ -170,14 +170,6 @@
 
 (require 'setup-basic)
 
-;;; setup slime
-(add-to-list 'load-path "~/.emacs.d/slime2/")
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
-(require 'slime)
-(slime-setup '(slime-fancy))
-
-(elpy-enable)
-(elpy-use-ipython)
 
 ;;; setup flycheck
 (require 'flycheck)
@@ -189,13 +181,35 @@
 (global-set-key (kbd "<f3>") (lambda()
                                (interactive) (sr-speedbar-toggle)))
 
-;;;setup mode support
+;;;setup language support
 (require 'markdown-mode)
 
 (require 'php-mode)
+
 (require 'smarty-mode)
-(add-to-list 'load-path "~/.emacs.d/ESS2/lisp/")
-(load "ess-site")
+
+(require 'setup-ess)
 
 ;; add java supports
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-mode))
+
+;;(require 'setup-slime)
+
+(elpy-enable)
+(elpy-use-ipython)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes (quote (light-blue))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

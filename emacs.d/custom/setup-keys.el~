@@ -4,6 +4,10 @@
 
 (global-set-key [f10] 'run-python)
 
+(global-set-key [f11] 'R)
+
+(global-set-key [f12] 'slime)
+
 (global-set-key [f7] 'menu-bar-open)
 
 (global-set-key [f1] 'dired)
@@ -19,6 +23,10 @@
 (global-set-key [C-f9] 'shell)
 
 (global-set-key [C-f10] 'run-python)
+
+(global-set-key [C-f11] 'R)
+
+(global-set-key [C-f12] 'slime)
 
 (global-set-key [C-f7] 'menu-bar-open)
 
