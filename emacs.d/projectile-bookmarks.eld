@@ -1,1 +1,0 @@
-("~/workspace/Emacs-config/elpy/" "~/.emacs.d/" "~/workspace/hello-word/")
