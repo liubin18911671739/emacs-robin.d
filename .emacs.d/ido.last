@@ -1,0 +1,41 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/r0b1n/" . ".emacs.d/")
+ ("/Users/" . "r0b1n/")
+ ("/Users/r0b1n/.emacs.d/" . "custom/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/r0b1n/workspace/"
+ "/Users/r0b1n/.emacs.d/"
+ "/Users/r0b1n/.emacs.d/custom/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "orange-ide.sh"
+ "init.el"
+ "setup-basic.el"
+ "setup-slime.el"
+ "sr-speedbar.el"
+ "setup-keys.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/r0b1n/workspace/" (22186 55207 0 0) "Theano/" "Tex-MD-test/" "spark-1.5.2/" "scikit-learn-videos/" "scikit-fusion/" "sbcl/" "RiA2/" "R-Test/" "pyqt-app/" "pydata-book/" "Py-Test/" "pattern/" "Orange3-Spark/" "orange3-example-addon/" "orange3/" "orange-ipynb/" "orange-ide" "orange/" "o3/" "nova/" "NLTK-Book/" "ML_for_Hackers/" "ipython-notebook.ipynb" "HelloWorld/" "FreeBSD/" "emacs-robin.d/" "diveintopython-5.4/" "DeepLearningTutorials/" "backup/" ".recommenders/" ".metadata/" ".DS_Store" ".#orange-ide" "#orange-ide#" "../" "./")
+
+ ("/Users/r0b1n/.emacs.d/" (22186 54159 0 0) "tutorial/" "snippets/" "slime2/" "semanticdb/" "request/" "places" "init.el" "ido.last" "ESS2/" "elpa/" "ede-projects.el" "custom/" "cedet-init.el" "backups/" "auto-save-list/" "ac-comphist.dat" "../" "./")
+
+ ("/Users/" (22185 33966 0 0) "Shared/" "r0b1n/" "Guest/" "felipe/" ".localized" "../" "./")
+
+ ("/Users/r0b1n/" (22186 55087 0 0) "zshrc/" "workspace/" "wekafiles/" "Untitled.ipynb" "Thumbs.db" "Soft/" "Public/" "Pictures/" "pgadmin.log" "nltk_data/" "Music/" "Movies/" "Library/" "knime-workspace/" "identity" "id_rsa" "emacs.d.zip" "Downloads/" "Documents/" "Desktop/" "centos-ec2-usa.pem" "Applications/" "anaconda2/" "anaconda/" ".zshrc~" ".zshrc" ".zsh_history" ".zsh-update" ".zinc/" ".zcompdump-r0b1n的MacBook Pro-5.0.8" ".z" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".wget-hsts" ".w3m/" ".vimrc.local" ".vimrc.bundles.local" ".vimrc.bundles" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".tooling/" ".tmux.conf.local" ".tmux.conf" ".swt/" ".subversion/" ".stardict/" ".ssh/" ".spyder2-py3/" ".spyder2/" ".smex-items" ".slime-history.eld" ".slime/" ".serverauth.9588" ".screenrc~" ".screenrc" ".scala_history" ".sbt/" ".rstudio-desktop/" ".rnd" ".Rhistory" ".RData" ".Rapp.history" ".python_history" ".pylint.d/" ".PyCharm50/" ".putty/" ".psql_history" ".profile-anaconda.bak" ".profile" ".pgpass" ".p2/" ".ovftool.ssldb" ".oracle_jre_usage/" ".oh-my-zsh/" ".matplotlib/" ".macports/" ".m2/" ".local/" ".lobo/" ".liclipse/" ".keysnail.js" ".jupyter/" ".junique/" ".ivy2/" ".ipython/" ".ipynb_checkpoints/" ".idlerc/" ".gitconfig" ".fontconfig/" ".filezilla/" ".eric6/" ".enstaller4rc" ".emacs.d/" ".eclipse/" ".DS_Store" ".docker/" ".distlib/" ".designer/" ".cups/" ".continuum/" ".config/" ".chemaxon/" ".CFUserTextEncoding" ".canopy/" ".cache/" ".bash_sessions/" ".bash_history" ".backups/" ".astropy/" ".argouml/" ".android/" "../" "./")
+
+ ("/Users/r0b1n/.emacs.d/custom/" (22186 52292 0 0) "sr-speedbar.el" "setup-w3m.el" "setup-slime.el~" "setup-slime.el" "setup-keys.el~" "setup-keys.el" "setup-ipython.el~" "setup-helm.el" "setup-helm-gtags.el" "setup-ggtags.el" "setup-ess.el~" "setup-ess.el" "setup-editing.el" "setup-cedet.el" "setup-basic.el" "markdown-mode.el" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

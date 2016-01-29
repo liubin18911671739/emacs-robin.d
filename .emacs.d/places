@@ -1,0 +1,12 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/r0b1n/.emacs.d/init.el" . 1785)
+ ("/Users/r0b1n/workspace/orange-ide.sh" . 86)
+ ("/Users/r0b1n/workspace/orange3/"
+  (dired-filename . "/Users/r0b1n/workspace/orange3/pylintrc"))
+ ("/Users/r0b1n/.zshrc" . 2093)
+ ("/usr/local/Cellar/python3/3.5.1/bin/spyder" . 3)
+ ("/Users/r0b1n/.emacs.d/custom/setup-keys.el" . 190)
+ ("/Users/r0b1n/.emacs.d/custom/sr-speedbar.el" . 24298)
+ ("/Users/r0b1n/.emacs.d/custom/setup-slime.el" . 53)
+ ("/Users/r0b1n/.emacs.d/custom/setup-basic.el" . 40)
+ ("/Users/r0b1n/.emacs.d/custom/setup-ess.el" . 219))
