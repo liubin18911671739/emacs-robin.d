@@ -46,7 +46,7 @@
 
 ;; Package: yasnippet
 (require 'yasnippet)
-(yas-global-mode 1)
+;; (yas-global-mode 1)
 
 ;; Package: smartparens
 (require 'smartparens-config)
@@ -100,41 +100,18 @@
 ;; slime setup
 (require 'setup-slime)
 
-;; other setup
-(setq
- c-default-style "linux" ;; set style to "python"
- )
-
-(global-set-key (kbd "RET") 'newline-and-indent)  ; automatically indent when press RET
-
-;; activate whitespace-mode to view all whitespace characters
-(global-set-key (kbd "C-c w") 'whitespace-mode)
-
-;; show unncessary whitespace that can mess up your diff
-(add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
-
-;; use space to indent by default
-(setq-default indent-tabs-mode nil)
-
-;; set appearance of a tab that is represented by 4 spaces
-(setq-default tab-width 4)
-
-;; Compilation
-(global-set-key (kbd "<f8>") (lambda ()
-                               (interactive)
-                               (setq-local compilation-read-command nil)
-                               (call-interactively 'compile)))
-
-;; setup GDB
-(setq
- ;; use gdb-many-windows by default
- gdb-many-windows t
-
- ;; Non-nil means display source file containing the main routine at startup
- gdb-show-main t
- )
-
 (require 'setup-basic)
 
-;;; init.el ends here
+(require 'osx-pseudo-daemon)
 
+;;daemon时的字体
+(defun frame-setting ()
+  (interactive)
+  ;; Setting English Font
+  (set-face-attribute
+   'default nil :font "SimKai 18")
+
+  )
+
+(frame-setting)
+;;; init.el ends here
