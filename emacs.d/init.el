@@ -46,7 +46,7 @@
 
 ;; Package: yasnippet
 (require 'yasnippet)
-;; (yas-global-mode 1)
+(yas-global-mode 1)
 
 ;; Package: smartparens
 (require 'smartparens-config)
@@ -104,14 +104,16 @@
 
 (require 'osx-pseudo-daemon)
 
-;;daemon时的字体
 (defun frame-setting ()
   (interactive)
   ;; Setting English Font
   (set-face-attribute
-   'default nil :font "SimKai 18")
+   'default nil :font "SimKai 16")
 
   )
 
 (frame-setting)
+
+;; (setq-default inferior-R-program-name
+;;              "/usr/local/bin/R")
 ;;; init.el ends here
