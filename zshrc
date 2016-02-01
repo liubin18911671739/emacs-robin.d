@@ -50,32 +50,36 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(osx fasd colored-man bundler extract ruby python github svn rails gem git-flow git-extras npm nvm node pod git macx z tmuxinator web-search sudo)
 
-# User configuration
+# User configuration  /Users/r0b1n/anaconda/bin:
 #export GIT_SOURCE="/Users/r0b1n/git-source"
-#export SCALA_HOME="$GIT_SOURCE/scala-2.11.5"
-export PATH="/sbin:/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/usr/sbin:/opt/X11/bin:/usr/local/go/bin:/opt/local/sbin:/Users/r0b1n/Qt5.3.0/5.3/clang_64/bin:/Users/r0b1n/anaconda/bin:."
+export SCALA_HOME="/Volumes/Data/Soft/scala-2.11.7"
+export SPARK_HOME="/Volumes/Data/workspace/spark"
+export CLOJURE_HOME="/Volumes/Data/Soft/clojure-1.8.0"
+export PATH="/sbin:/bin:/usr/sbin:/usr/local/Cellar/qt/4.8.7_2/bin:/usr/local/Cellar/python3/3.5.1/bin:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/usr/bin:/Users/r0b1n/anaconda2/bin:$SCALA_HOME/bin:$SPARK_HOME/bin:Library/Tex/texbin:/opt/X11/bin:/usr/local/go/bin:$CLOJURE_HOME:."
 # export MANPATH="/usr/local/man:$MANPATH"
-export RAPIDMINER_HOME="/Users/r0b1n/git-source/rapidminer"
+#export RAPIDMINER_HOME="/Users/r0b1n/git-source/rapidminer"
 source $ZSH/oh-my-zsh.sh
-#source GOPATH=/usr/local/go
+export GO_PATH=/usr/local/go
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 #Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='mvim'
- fi
+# if [[ -n $SSH_CONNECTION ]]; then
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient"
+#export EDITOR='emacs'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home"
-export APACHE_SOLR_HOME="/Users/r0b1n/Downloads/solr-5.2.0"
-export APACHE_NUTCH_HOME="/Users/r0b1n/Downloads/apache-nutch-1.10"
+#export APACHE_SOLR_HOME="/Users/r0b1n/Downloads/solr-5.2.0"
+#export APACHE_NUTCH_HOME="/Users/r0b1n/Downloads/apache-nutch-1.10"
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -84,4 +88,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export http_proxy=
+export https_proxy=https://127.0.0.1:8087
+
+alias ec="emacsclient -t"
+alias eck="emacsclient -e '(kill-emacs)'"

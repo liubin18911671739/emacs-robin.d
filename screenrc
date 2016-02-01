@@ -34,7 +34,7 @@ escape ``
 
 # 定制 region 函数键与Emacs一致
 
-bind 3 split -v
+#bind 3 split -v
 
 bind 2 split
 
@@ -44,7 +44,7 @@ bind 1 only
 
 bind 0 remove
 
-
+bind \ quit
 
 ## bind F7 to create a new screen
 
