@@ -8,6 +8,8 @@
 
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -30,6 +32,9 @@
 ;; --------------------------------------
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
+
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+(setq exec-path (append exec-path '("/Library/TeX/texbin")))
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/Cellar/python3/3.5.1/bin/"))
 (setq exec-path (append exec-path '("/usr/local/Cellar/python3/3.5.1/bin/")))
@@ -62,14 +67,14 @@
 ;; --------------------------------------
 
 (elpy-enable)
+;; (setq elpy-rpc-python-command "python3")  
 (elpy-use-ipython)
 
+
 ;; use flycheck not flymake with elpy
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
-
-
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (global-flycheck-mode t)
 

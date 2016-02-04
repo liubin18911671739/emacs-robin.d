@@ -16,7 +16,7 @@
 ;; Copyright (C) 2011 Jeremiah Dodds <jeremiah.dodds@gmail.com>
 ;; Copyright (C) 2011 Christopher J. Madsen <cjm@cjmweb.net>
 ;; Copyright (C) 2011 Shigeru Fukaya <shigeru.fukaya@gmail.com>
-;; Copyright (C) 2011 Joost Kremers <joostkremers@fastmail.fm>
+;; Copyright (C) 2011 Joost Kremers <joostkremersd@fastmail.fm>
 ;; Copyright (C) 2011-2012 Donald Ephraim Curtis <dcurtis@milkbox.net>
 ;; Copyright (C) 2012 Akinori Musha <knu@idaemons.org>
 ;; Copyright (C) 2012 Zhenlei Jia <zhenlei.jia@gmail.com>
@@ -26,6 +26,7 @@
 ;; Copyright (C) 2015 Antonis Kanouras <antonis@metadosis.gr>
 ;; Copyright (C) 2015 Howard Melman <hmelman@gmail.com>
 ;; Copyright (C) 2015-2016 Danny McClanahan <danieldmcclanahan@gmail.com>
+;; Thu Feb  4 16:38:46 CST 2016
 
 ;; Author: Jason R. Blevins <jrblevin@sdf.org>
 ;; Maintainer: Jason R. Blevins <jrblevin@sdf.org>
